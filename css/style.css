@@ -1,0 +1,83 @@
+body{
+    background: #255 url(../imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+.mosquito-1{
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito-2{
+    width: 70px;
+    height: 70px;
+}
+
+.mosquito-3{
+    width: 90px;
+    height: 90px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 250px) and (max-width: 700px) {
+
+    body{
+        background: #255 url(../imagens/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 300%;
+    }
+   
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+   
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    
+}
+
+
