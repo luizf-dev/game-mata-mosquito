@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Game Mata-Mosquito</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onresize="ajustaAreaJogo()">
+
+    <div class="container">
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v2" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v3" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v4" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v5" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v6" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v7" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            </div>
+
+            <div class="cronometro">
+                <h6>Tempo Restante: <span id="cronometro"></span></h6>   
+            </div>
+        </div>
+    </div>    
+
+    <!--======== Javascript ==============================================-->
+    <script src="js/game.js"></script>
+    <script>   
+    
+    document.getElementById('cronometro').innerHTML = tempo;
+
+    var criaMosquito = setInterval(function(){
+        posicaoRandomica()
+    }, criaMosquitoTempo);    
+
+    </script>
+</body>
+</html>
