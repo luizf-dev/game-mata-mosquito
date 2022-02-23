@@ -1,6 +1,7 @@
 /* ======= Funçao para ajustar Area do palco do jogo ========== */
 var altura = 0;
 var largura = 0;
+var vidas = 1;
 
 function ajustaAreaJogo(){
 
@@ -17,7 +18,7 @@ ajustaAreaJogo()
 
 
 
-/* ========= Funcao para criar as posições randomicas 
+/* Funcao para criar as posições randomicas 
 do posicionamento do mosquito =====================*/
 
 function posicaoRandomica(){
@@ -26,6 +27,17 @@ function posicaoRandomica(){
 
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
+
+
+        //lógica para para o jogo e dar o game over caso perder todos os pontos de vida
+        if(vidas > 7 ){
+            window.location.href = 'game-over.html';
+        }else{
+            document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png";
+
+            vidas++;            
+        }
+        
     }
 
     var posicaoX = Math.floor(Math.random() * largura) -90;
@@ -45,6 +57,9 @@ function posicaoRandomica(){
     mosquito.style.top = posicaoY + 'px'; 
     mosquito.style.position = 'absolute';
     mosquito.id = 'mosquito';
+    mosquito.onclick = function(){
+        this.remove();
+    }
 
     document.body.appendChild(mosquito);
 }
